@@ -12,6 +12,10 @@ class Calculator
       (1..n).reduce(:*)
     end
   end
+
+  def multiply(a, b)
+    a * b
+  end
 end
 
 describe Calculator do
@@ -19,6 +23,13 @@ describe Calculator do
     it 'return the sum of its two arguments' do
       calc = Calculator.new
       expect(calc.add(5, 10)).to eq(15)
+    end
+  end
+
+  describe '#multiply' do
+    it 'returns 12 given 4 and 3' do
+      calc = Calculator.new
+      expect(calc.multiply(4, 3)).to eq(12)
     end
   end
 
